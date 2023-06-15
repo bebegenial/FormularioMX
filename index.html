@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" type="text/css" href="src/style.css" media="screen" />
+    <title>Formulario</title>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWJZGRYDH3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VWJZGRYDH3');
+</script>
+<body>
+
+    <form action="" autocomplete="off">
+
+        <div class="cabecera">
+
+            <img src="img/Logo.png" alt="Logo">
+
+            <div class="datoEmp">
+                <h1>Editorial BEBE Genial SA DE CV</h1>
+                <p id="nitE">RFC: EBG170126263</p>
+                <p class="dE">Dinamarca #48 esquina Liverpool, Col. Juárez, Delegación Cuauhtémoc</p>
+                <p class="dE">C.P. 06600, Ciudad de México, Tel 55 5502 6643 - 33 1587 4305</p>
+                <p class="dE">E-mail: directormx@bebegenial.com; servicioalclientemx@bebegenial.com</p>
+                <p class="dE">www.bebegenial.com.mx, www.metodobebepoliglota.com</p>
+            </div>
+
+            <div class="infoPedido">
+                <div class="contenedor">
+                    <label for="nPedido">PEDIDO </label>
+                    <input id="pedido" type="number">
+                    <label for="fPedido">FECHA </label>
+                    <input id="fecha" type="text">
+                    <label for="cPedido">CUENTA </label>
+                    <input id="cuenta" type="number">
+                </div>
+            </div>
+        </div>
+
+        <div class="datosClientes">
+
+            <div class="nomApe">
+                <div class="divMitadI">
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" required>
+                </div>
+                <div class="divMitadD">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="" id="apellido" required>
+                </div>
+            </div>
+
+            <div class="dirTelBarr">
+                <div class="divMitadI">
+                    <label for="direccion">Direccion Res.:</label>
+                    <input type="text" id="direccion" required>
+                </div>
+                <div class="divMitadD">
+                    <div class="div26">
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="celular" required>
+                    </div>
+                    <div class="div56">
+                        <label for="Barrio">Barrio:</label>
+                        <input type="text" id="barrio">
+                    </div>
+                </div>
+            </div>
+
+            <div class="emprTelDir">
+                <div class="divMitadI">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" id="empresa">
+                </div>
+                <div class="divMitadD">
+                    <div class="div26">
+                        <label for="telefonoEmp">Telefono:</label>
+                        <input type="tel" id="telefonoEmp">                        
+                    </div>
+                    <div class="div56">
+                        <label for="dirEmpr">Direccion:</label>
+                        <input type="text" id="dirEmpr">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carAntSuel">
+                <div class="divMitadI">
+                    <div class="div56-2">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo">
+                    </div>
+                    <div class="div26-2">
+                        <label for="antiguedad">Antiguedad:</label>
+                        <input type="text" id="antiguedad">
+                    </div>
+                </div>
+
+                <div class="divMitadD">
+                    <div class="div26">
+                        <label for="sueldo">Sueldo:</label>
+                        <input type="number" id="sueldo">
+                    </div>
+                    <div class="div56">
+                        <label for="vivienda">Vivienda:
+                        <label for="propia">Propia</label>
+                        <input type="checkbox" id="propia">
+                        <label for="Alquilada">Alquilada</label>
+                        <input type="checkbox" id="alquilada"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emailEntFecha">
+                <div class="divMitadI">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="divMitadD">
+                    <div class="div26">
+                        <label for="entrega">Entrega
+                        <label for="cCasa">Casa
+                        <input type="checkbox" id="cCasa"></label>
+                        <label for="cEmpresa">Empr</label>
+                        <input type="checkbox" id="cEmpresa"></label>
+                    </div>
+                    <div class="div56">
+                        <label for="fCobro">Fecha de Cobro:</label>
+                        <input type="text" id="fCobro">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="ninoCiudad">
+            <div class="nomNino">
+                <label for="nino">Nombre del niñ@:</label>
+                <input type="text" id="nino">
+            </div>
+            <div class="ciudad">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad">
+            </div>
+        </div>
+
+        <div class="conyCodeudor">
+            <div class="nomApe">
+                <div class="divMitadI">
+                    <label for="nombreCony">Nombre (Conyugue o Codeudor):</label>
+                    <input type="text" id="nombCo">
+                </div>
+                <div class="divMitadD">
+                    <label for="apellidoCony">Apellido (Conyugue o Codeudor):</label>
+                    <input type="text" id="apellCo">
+                </div>
+            </div>
+
+            <div class="dirTelBarr">
+                <div class="divMitadI">
+                    <label for="empCo">Empresa:</label>
+                    <input type="text" id="empCo">
+                </div>
+                <div class="divMitadD">
+                    <div class="div26">
+                        <label for="telCo">Telefono:</label>
+                        <input type="tel" id="telCo">
+                    </div>
+                    <div class="div56">
+                        <label for="direCo">Direccion:</label>
+                        <input type="text" id="direCo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carAntSuel2">
+                <div class="divMitadI">
+                    <div class="div56-2">
+                        <label for="cargoCo">Cargo:
+                        <input type="text" id="cargoCo"></label>
+                    </div>
+                    <div class="div26-2">
+                        <label for="antiCo">Antiguedad:
+                        <input type="text" id="antiCo"></label>
+                    </div>
+                </div>
+                <div class="divMitadD">
+                    <div class="div26">
+                        <label for="suelCo">Sueldo:
+                        <input type="number" id="suelCo"></label>
+                    </div>
+                    <div class="div56">
+                        <label for="automovil">Automovil:
+                        <label for="si">Si</label>
+                        <input type="checkbox" id="autosi">
+                        <label for="no">No</label>
+                        <input type="checkbox" id="autono"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reObReCo">
+
+            <div class="iz81">
+                <div class="referido">
+                    <div class="datoReferido">
+                        <label for="nombreR1">Nombre:</label>
+                        <input type="text" id="nombR1">
+                        <label for="ptco1">Parentesco:</label>
+                        <input type="text" id="ptco1">
+                    </div>
+                    <div class="datoReferido">
+                        <label for="telOR1">Tel. Of.::</label>
+                        <input type="tel" id="telOR1">
+                        <label for="telRR1">Tel. Res.::</label>
+                        <input type="tel" id="telRR1">
+                    </div>
+
+                    <div class="datoReferido">
+                        <label for="nombreR2">Nombre:</label>
+                        <input type="text" id="nombR2">
+                        <label for="ptco2">Parentesco:</label>
+                        <input type="text" id="ptco2">
+                    </div>
+                    <div class="datoReferido">
+                        <label for="telOR2">Tel. Of.::</label>
+                        <input type="tel" id="telOR2">
+                        <label for="telRR2">Tel. Res.::</label>
+                        <input type="tel" id="telRR2">
+                    </div>
+
+                    <div class="datoReferido">
+                        <label for="nombreR3">Nombre:</label>
+                        <input type="text" id="nombR3">
+                        <label for="ptco3">Parentesco:</label>
+                        <input type="text" id="ptco3">
+                    </div>
+                    <div class="datoReferido">
+                        <label for="telOR3">Tel. Of.::</label>
+                        <input type="tel" id="telOR3">
+                        <label for="telRR3">Tel. Res.::</label>
+                        <input type="tel" id="telRR3">
+                    </div>
+
+                    <div class="datoReferido">
+                        <label for="nombreR4">Nombre:</label>
+                        <input type="text" id="nombR4">
+                        <label for="ptco4">Parentesco:</label>
+                        <input type="text" id="ptco4">
+                    </div>
+                    <div class="datoReferidoF">
+                        <label for="telOR4">Tel. Of.::</label>
+                        <input type="tel" id="telOR4">
+                        <label for="telRR4">Tel. Res.::</label>
+                        <input type="tel" id="telRR4">
+                    </div>
+                </div>
+
+                <div class="obras">
+                    <div class="coleccionOb">
+                        <label for="coleccion">Coleccion</label>
+                    </div>
+                    <div class="valorOb">
+                        <label for="valor" id="valorC">Valor</label>
+                    </div>
+
+                    <textarea name="" id="detColec" cols="30" rows="7"></textarea>
+                    <textarea name="" id="detValor" cols="30" rows="7"></textarea>
+
+                    <div class="importetol">
+                        <div class="importe">
+                            <label for="importeTotal">Importe Total:</label>
+                        </div>
+                        <div class="totalVal">
+                            <input type="text" id="totalVal">
+                        </div>
+                    </div>
+
+                    <div class="coutasOb">
+                        <label for="nCuotas">No. Cuotas:</label>
+                        <input type="text" id="nCoutas">
+                        <label for="vCutoa">VR. Coutas:</label>
+                        <input type="text" id="vrCuota">
+                    </div>
+                </div>
+
+                <div class="observaciones">
+                    <textarea name="" id="observ" cols="39" rows="6">Observaciones:
+Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
+                    </textarea>
+                </div>
+
+                <div class="relacionista">
+                    <label for="relacionistaC">Toma de Contacto:</label>
+                    <input type="text" id="tomaCont" required>
+                </div>
+                
+                <div class="relacionista">
+                    <label for="telCliente">Tel. CRM:</label>
+                    <input type="number" id="telCliente">
+                </div>
+
+                <div class="especialista">
+                    <label for="especialista">Especialista:</label>
+                    <input type="text" id="especialista">
+                </div>
+
+                <div class="director">
+                    <label for="director">Director:</label>
+                    <input type="text" id="director">
+                </div>
+            </div>
+
+            <div class="de105">
+                <div class="legal">
+                    <p id="tituloL">DATOS IMPORTANTES PARA EL CLIENTE</p>
+                    <br>
+                    <p id="textoL">Cláusula que sujetan a ambas partes que intervienen en el presente contrato. PRIMERA: EDITORIAL BEBE GENIAL SA DE CV RFC :
+                        EBG 170126263 y/ o La SANTEL PROGRAMAS EDUCATIVOS SA DE CV Se obliga por el presente contrato a realizar la entrega del
+                        material solicitado en la fecha de la firma de este contrato, mismo que reconoce, no será válido sin la firma de recepción de material del
+                        comprador o la persona previamente designada para ello. SEGUNDA: Causales para el vencimiento de este contrato. Según el código
+                        de comercio vigente a la firma de este contrato, el vendedor podrá exigir el pago total de la deuda, al vencerse dos pagos parciales.
+                        También es causa de terminación de este contrato, que el comprador cumpla anticipadamente su deuda total a EDITORIAL BEBE
+                        GENIAL SA DE CV RFC : EBG 170126263 y/o ESCUELA INTERCACIONAL DE COMPETITIVIDAD ESIC SA DE CV. El pago parcial de
+                        uno o varios recibos ya sean mensuales o quincenales, no libera al comprador del saldo total de su deuda, misma en favor de
+                        EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV; y le serán
+                        cargados intereses moratorios sobre la parcialidad adeudada. TERCERA: Si el comprador no paga su cuota dentro de los cinco (5) días
+                        correspondientes a su pago, incurrirá en intereses moratorios del 6%. CUARTA: El comprador se obliga a informar los cambios de
+                        domicilio dentro y fuera de la ciudad a EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS
+                        EDUCATIVOS SA DE CV, en un plazo no mayor de tres (3) días hábiles, si no informa a tiempo el cambio de domicilio cubrirá todos los
+                        gastos que se originen en la localización del mismo. . QUINTA: El comprador autoriza y faculta expresa e irrevocablemente a
+                        EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, para que solicite a
+                        la(s) Sociedad(es) de Información Crediticia Nacionales o Extranjeras que considere necesaria(s), toda la información relativa a mi
+                        historial crediticio. De igual manera EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS
+                        EDUCATIVOS SA DE CV, queda autorizado a realizar revisiones periódicas y proporcionar información sobre el historial crediticio del
+                        comprador a la(s) Sociedad(es) de Información Crediticia Nacionales o Extranjeras que considere necesaria(s), en términos de la Ley
+                        para Regular las Sociedades de Información Crediticia. La presente autorización estará vigente cuando menos durante tres años
+                        contados a partir de la fecha de firma de ésta o en tanto exista una relación jurídica con EDITORIAL BEBE GENIAL SA DE CV RFC : EBG
+                        170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV El comprador declara que conoce plenamente la naturaleza y alcance
+                        de la información que se solicitará, las consecuencias y alcance de la información que la(s) Sociedad(es) de Información Crediticia le(s)
+                        proporcionará(n) a EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV,
+                        que dicha institución podrá realizar consultas periódicas de mi historial crediticio y el uso que ésta hará de tal información. El comprador
+                        acepta que una vez firmada esta autorización, el presente documento será propiedad de EDITORIAL BEBE GENIAL SA DE CV RFC :
+                        EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, para los efectos que señala el artículo 28 de la Ley para Regular
+                        las Sociedades de Información Crediticia. SEXTA: El comprador, SI ( ) NO ( ) acepta que EDITORIAL BEBE GENIAL SA DE CV RFC :
+                        EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV ceda o transmita a terceros, con fines mercadotécnicos o
+                        publicitarios, la información proporcionada por él, con motivo del presente contrato y SI ( ) NO ( ) acepta que EDITORIAL BEBE GENIAL
+                        SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, le envié publicidad sobre bienes y servicios.
+                        SEPTIMA: Para cambios de mercancía, por defecto de fabricación en enciclopedias o libros, discos compactos, DVDs, audio, videos,
+                        etc. que quieran realizar el comprador, contara únicamente de 30 días a partir de la entrega del producto. Si no hay reclamación por el
+                        comprador en su material de acuerdo con lo anterior señalado, EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o La
+                        SANTEL PROGRAMAS EDUCATIVOS SA DE CV no estará obligada a realizar dichos cambios. Por este motivo es recomendable que
+                        el comprador revise bien su mercancía cuando le sea entregada de esta forma se evitarán malos entendidos entre ambas partes.
+                        OCTAVA: EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o La SANTEL PROGRAMAS EDUCATIVOS SA DE CV, no
+                        reconocerá ningún trato verbal de sus vendedores que no esté asentado en este pedido conforme al inciso <g> del art. 47 de la ley
+                        federal de protección al consumidor, el comprador tiene la facultad de revocar el consentimiento otorgado en el presente contrato en la
+                        forma que anuncia el art. 48 de la misma ley. NOVENA: Pena convencional. El comprador tendrá cinco (5) días a partir de la firma de este
+                        contrato para cancelar sin tener que pagar ningún tipo de penalización, en caso de que el comprador requiera rescindir el presente
+                        contrato devolviendo la mercancía, deberá tener cubierto un 25% del monto de lo adquirido (que no le será devuelto, conservándolo la
+                        EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/ o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, en el rubro de
+                        penalización por cancelación) y devolver el material en perfecto estado. Esto en un plazo no mayor a cinco (05) días después de
+                        entregada la mercancía, después de este plazo no se aceptará dicha cancelación. Queda enterado, que mientras este dentro del plazo
+                        estipulado. DECIMA: Después de firmar este pedido la empresa bajo ninguna situación devolverá el valor recibido como cuota inicial, ya
+                        que la empresa presta asesoría personalizada e incurre en gastos de estudio de pedido y entrega.</p>
+                </div>
+
+                <div class="celHuella">
+                    <div class="datoCedula">
+                        <input type="number" id="cedula1" required>
+                        <label for="cc">IFE</label>
+                        <input type="checkbox" id="cc1">
+                        <label for="ce">C.E.</label>
+                        <input type="checkbox" id="ce1">
+                        <label for="nit">RFC</label>
+                        <input type="checkbox" id="nit1">
+                    </div>
+                    <div class="huella">
+                        <p id="indiceD">Indice Derecho</p>
+                    </div>
+                </div>
+
+                <div class="celHuella">
+                    <div class="datoCedula">
+                        <input type="number" id="cedula2">
+                        <label for="cc">IFE</label>
+                        <input type="checkbox" id="cc2">
+                        <label for="ce">C.E.</label>
+                        <input type="checkbox" id="ce2">
+                        <label for="nit">RFC</label>
+                        <input type="checkbox" id="nit2">
+                    </div>
+                    <div class="huella">
+                        <p id="indiceD">Indice Derecho</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagare">
+
+            <div class="izqP">
+                <div class="terminosPagare">
+                    <p id="textoPagare1">Yo, (nosotros)_____________________________________________________________________ identificado (s) como aparece al pie de mi (nuestras) firma(s), manifiesto (manifestamos) que me (nos) obligo(obligamos) solidariamente a pagar a EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, o a su orden en esta ciudad o en sus oficinas de __________________________ _______________________ la suma de $ __________________ en:_______________cuotas mensuales sucesivas e iguales de $ ______________________ cada una pagaderas el dia ____ de cada mes, siendo pagadera la primera de ellas el dia ____________ de__________________, y asi sucesivamente hasta completar el número de cuotas mencionadas. En el valor de cada cuota mensual está incluido los intereses del plazo a la tasa del ___________ mensual liquida sobre los saldos de capital. En caso de mora reconoceré, (reconoceremos) intereses a la tasa máxima prevista en la ley para este evento en el momento de presentarse la mora.</p>
+                    <p id="textoPagare2">Manifiesto (manifestamos) que para los efectos del artículo 1583 y demás concordantes del código civil, nuestras obligaciones se consideran como indivisibles. Expresamente, autorizo (autorizamos) al acreedor para dar por vencido el plazo pendiente de la obligación y exigir de inmediato judicial o extrajudicialmente, el pago del total del saldo insoluto de las obligaciones aquí incorporadas en el evento en que dejare (dejaremos) de pagar en el tiempo debido una o más cuotas de amortización gradual de las arriba mencionadas. Autorizo (autorizamos) al acreedor para que en caso de incumplimiento de cualquiera de las obligaciones contraídas por el presente documento, dé aviso de este hecho a BURÓ DE CREDITO y/o cualquier entidad que preste servicio de información comercial y consultar dicha Asociación y/o entidad de mi (nuestro) endeudamiento actual. Tasa efectiva anual____________ para constancia se firma en ______________ a los ____________ (   ) días del mes de ______________ de __________ (     )</p>
+                </div>
+    
+                <div class="firmaCedHuellas">
+                    <label for="cedula3">IFE</label>
+                    <input type="text" id="cedula3">
+                    <div class="huella2">
+                        <p id="indiceD">Indice Derecho</p>
+                    </div>
+                    <input type="button" id="guardar" value="Guardar">
+                    <!--<button id="guardar">Guardar</button>-->
+                    <label for="cedula4">IFE</label>
+                    <input type="text" id="cedula4">
+                    <div class="huella2">
+                        <p id="indiceD">Indice Derecho</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="derP">
+                <p id="textoPagare3">PAGARE</p>
+            </div>
+        </div>
+
+    </form>
+
+    <div class="articulos">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>       
+        <p>
+            Cláusula que sujetan a ambas partes que intervienen en el presente contrato. PRIMERA: EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV Se obliga por el presente contrato a realizar la entrega del material solicitado en la fecha de la firma de este contrato, mismo que reconoce, no será válido sin la firma de recepción de material del comprador o la persona previamente designada para ello. SEGUNDA: Causales para el vencimiento de este contrato. Según el código de comercio vigente a la firma de este contrato, el vendedor podrá exigir el pago total de la deuda, al vencerse dos pagos parciales. También es causa de terminación de este contrato, que el comprador cumpla anticipadamente su deuda total a EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV El pago parcial de uno o varios recibos ya sean mensuales o quincenales, no libera al comprador del saldo total de su deuda, misma en favor de EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV; y le serán cargados intereses moratorios sobre la parcialidad adeudada. TERCERA: Si el comprador no paga su cuota dentro de los cinco (5) días correspondientes a su pago, incurrirá en intereses moratorios del 6%. CUARTA: El comprador se obliga a informar los cambios de domicilio dentro y fuera de la ciudad a EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, en un plazo no mayor de tres (3) días hábiles, si no informa a tiempo el cambio de domicilio cubrirá todos los gastos que se originen en la localización del mismo. QUINTA: El comprador autoriza y faculta expresa e irrevocablemente a EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, para que solicite a la(s) Sociedad(es) de Información Crediticia Nacionales o Extranjeras que considere necesaria(s), toda la información relativa a mi historial crediticio. De igual manera EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, queda autorizado a realizar revisiones periódicas y proporcionar información sobre el historial crediticio del comprador a la(s) Sociedad(es) de Información Crediticia Nacionales o Extranjeras que considere necesaria(s), en términos de la Ley para Regular las Sociedades de Información Crediticia. La presente autorización estará vigente cuando menos durante tres años contados a partir de la fecha de firma de ésta o en tanto exista una relación jurídica con EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV El comprador declara que conoce plenamente la naturaleza y alcance de la información que se solicitará, las consecuencias y alcance de la información que la(s) Sociedad(es) de Información Crediticia le(s) proporcionará(n) a EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, que dicha institución podrá realizar consultas periódicas de mi historial crediticio y el uso que ésta hará de tal información.
+            <br>
+            El comprador acepta que una vez firmada esta autorización, el presente documento será propiedad de EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, para los efectos que señala el artículo 28 de la Ley para Regular las Sociedades de Información Crediticia. SEXTA: El comprador, SI ( ) NO ( ) acepta que EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV ceda o transmita a terceros, con fines mercadotécnicos o publicitarios, la información proporcionada por él, con motivo del presente contrato y SI ( ) NO ( ) acepta que EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, le envié publicidad sobre bienes y servicios. SEPTIMA: Para cambios de mercancía, por defecto de fabricación en enciclopedias o libros, discos compactos, DVDs, audio, videos, etc. Que quieran realizar el comprador, contara únicamente de 30 días a partir de la entrega del producto. Si no hay reclamación por el comprador en su material de acuerdo con lo anterior señalado, EDITORIAL BEBE GENIAL SA DE CV RFC: EBG 170126263 y/o La SANTEL PROGRAMAS EDUCATIVOS SA DE CV no estará obligada a realizar dichos cambios. Por este motivo es recomendable que el comprador revise bien su mercancía cuando le sea entregada de esta forma se evitarán malos entendidos entre ambas partes. OCTAVA: EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/o La SANTEL PROGRAMAS EDUCATIVOS SA DE CV, no reconocerá ningún trato verbal de sus vendedores que no esté asentado en este pedido conforme al inciso <g> del art. 47 de la ley federal de protección al consumidor, el comprador tiene la facultad de revocar el consentimiento otorgado en el presente contrato en la forma que anuncia el art. 48 de la misma ley. NOVENA: Pena convencional. El comprador tendrá cinco (5) días a partir de la firma de este contrato para cancelar sin tener que pagar ningún tipo de penalización, en caso de que el comprador requiera rescindir el presente contrato devolviendo la mercancía, deberá tener cubierto un 25% del monto de lo adquirido (que no le será devuelto, conservándolo la EDITORIAL BEBE GENIAL SA DE CV RFC : EBG 170126263 y/ o SANTEL PROGRAMAS EDUCATIVOS SA DE CV, en el rubro de penalización por cancelación) y devolver el material en perfecto estado. Esto en un plazo no mayor a cinco (05) días después de entregada la mercancía, después de este plazo no se aceptará dicha cancelación. Queda enterado, que mientras este dentro del plazo estipulado. DECIMA: Después de firmar este pedido la empresa bajo ninguna situación devolverá el valor recibido como cuota inicial, ya que la empresa presta asesoría personalizada e incurre en gastos de estudio de pedido y entrega.
+
+        </p>        
+    </div>
+<!--
+    <div class="imgcedula1">
+        <form action="" autocomplete="off">
+            <input type="file" name="imgfile" id="imgfile">
+            <embed id="visual1" type="image/jpeg">
+            
+            <input type="file" name="imgfile" id="imgfile2">
+            <embed id="visual2" type="image/jpeg">
+        </form>
+    </div>
+
+    <div class="comPago">
+        <form action="" autocomplete="off">
+            <input type="file" name="pagofile" id="pagofile">
+            <embed id="pago1" type="image/jpeg">
+        </form>
+    </div>
+-->
+
+    <script src="src/script.js"></script>
+</body>
+</html><!--Hector Rosas-->
