@@ -217,8 +217,8 @@ h1, #nitE{
 }
 
 #barrio{
-    min-width: 40mm;
-    max-width: 40mm;
+    min-width: 35mm;
+    max-width: 35mm;
     font-weight: bold;
     font-size: 65%;
 }
@@ -1128,8 +1128,8 @@ li{
     }
     
     #barrio{
-        min-width: 43mm;
-        max-width: 43mm;
+        min-width: 35mm;
+        max-width: 35mm;
         font-weight: bold;
         font-size: 65%;
     }

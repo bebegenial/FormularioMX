@@ -185,7 +185,7 @@ function enviarFormulario(){
 }
 
 function validarCampos(){
-    if($pedido.value.length === 0 || $nombre1.value.length === 0 || $apellido.value.length === 0 || $direccion.value.length === 0 || $telefono.value.length === 0 || $email.value.length === 0 || $ciudad.value.length === 0 || $cedula1.value.length === 0 || $relacionista.value.length === 0 || $colaborador.value.length === 0){
+    if($pedido.value.length === 0 || $nombre1.value.length === 0 || $apellido.value.length === 0 || $direccion.value.length === 0 || $telefono.value.length === 0 || $email.value.length === 0 || $ciudad.value.length === 0 || $relacionista.value.length === 0 || $colaborador.value.length === 0){
         return false;
     }else{
         return true;
@@ -235,11 +235,12 @@ function resaltarCampos(){
         $ciudad.style.background = "transparent";
     }
 
+    /*
     if($cedula1.value.length === 0){
         $cedula1.style.background = "rgb(255, 209, 209)";
     }else{
         $cedula1.style.background = "white";
-    }
+    }*/
 
     if($relacionista.value.length === 0){
         $relacionista.style.background = "rgb(255, 209, 209)";

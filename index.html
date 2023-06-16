@@ -32,7 +32,7 @@
                 <p class="dE">Dinamarca #48 esquina Liverpool, Col. Juárez, Delegación Cuauhtémoc</p>
                 <p class="dE">C.P. 06600, Ciudad de México, Tel 55 5502 6643 - 33 1587 4305</p>
                 <p class="dE">E-mail: directormx@bebegenial.com; servicioalclientemx@bebegenial.com</p>
-                <p class="dE">www.bebegenial.com.mx, www.metodobebepoliglota.com</p>
+                <p class="dE">www.bebegenial.com.mx</p>
             </div>
 
             <div class="infoPedido">
@@ -42,7 +42,7 @@
                     <label for="fPedido">FECHA </label>
                     <input id="fecha" type="text">
                     <label for="cPedido">CUENTA </label>
-                    <input id="cuenta" type="number">
+                    <input id="cuenta" type="text">
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                         <input type="tel" id="celular" required>
                     </div>
                     <div class="div56">
-                        <label for="Barrio">Barrio:</label>
+                        <label for="Barrio">Colonia y CP:</label>
                         <input type="text" id="barrio">
                     </div>
                 </div>
@@ -276,7 +276,10 @@
                         <label for="valor" id="valorC">Valor</label>
                     </div>
 
-                    <textarea name="" id="detColec" cols="30" rows="7"></textarea>
+                    <textarea name="" id="detColec" cols="30" rows="7">Metodo Bebe Poliglota
+Leo Con Leo
+Expreso de Leo
+                    </textarea>
                     <textarea name="" id="detValor" cols="30" rows="7"></textarea>
 
                     <div class="importetol">
@@ -378,7 +381,7 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
 
                 <div class="celHuella">
                     <div class="datoCedula">
-                        <input type="number" id="cedula1" required>
+                        <input type="text" id="cedula1">
                         <label for="cc">IFE</label>
                         <input type="checkbox" id="cc1">
                         <label for="ce">C.E.</label>
@@ -393,7 +396,7 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
 
                 <div class="celHuella">
                     <div class="datoCedula">
-                        <input type="number" id="cedula2">
+                        <input type="text" id="cedula2">
                         <label for="cc">IFE</label>
                         <input type="checkbox" id="cc2">
                         <label for="ce">C.E.</label>
@@ -455,9 +458,11 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
 
     <div class="imgcedula1">
         <form action="" autocomplete="off">
+            <label for="">Selecciona la imagen del IFE/INE Frontal</label>
             <input type="file" name="imgfile" id="imgfile">
             <embed id="visual1" type="image/jpeg">
             
+                <label for="">elecciona la imagen del IFE/INE Posterior</label>
             <input type="file" name="imgfile" id="imgfile2">
             <embed id="visual2" type="image/jpeg">
         </form>
@@ -465,6 +470,7 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
 
     <div class="comPago">
         <form action="" autocomplete="off">
+            <label for="">Selecciona la imagen del Pago</label>
             <input type="file" name="pagofile" id="pagofile">
             <embed id="pago1" type="image/jpeg">
         </form>
