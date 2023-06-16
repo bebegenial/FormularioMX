@@ -1254,10 +1254,33 @@ li{
         max-width: 138mm;
         border-right: 1px black solid ;
     }
+
+    .nomNino1{
+        display: inline-block;
+        min-height: 7mm;
+        max-height: 7mm;
+        min-width: 96.5mm;
+        max-width: 96.5mm;
+        border-right: 1px black solid ;
+    }
+    .edadNino{
+        display: inline-block;
+        min-height: 7mm;
+        max-height: 7mm;
+        min-width: 38mm;
+        max-width: 38mm;
+    }
+    
+    #edadNino1{
+        min-width: 27mm;
+        max-width: 27mm;
+        font-weight: bold;
+        font-size: 80%;
+    }
     
     #nino{
-        min-width: 109mm;
-        max-width: 109mm;
+        min-width: 67mm;
+        max-width: 67mm;
         font-weight: bold;
     }
     
