@@ -325,9 +325,34 @@ h1, #nitE{
     border-right: 1px black solid ;
 }
 
+.nomNino1{
+    display: inline-block;
+    min-height: 7mm;
+    max-height: 7mm;
+    min-width: 96.5mm;
+    max-width: 96.5mm;
+    border-right: 1px black solid ;
+}
+.edadNino{
+    display: inline-block;
+    min-height: 7mm;
+    max-height: 7mm;
+    min-width: 38mm;
+    max-width: 38mm;
+}
+
+#edadNino1{
+    min-width: 28mm;
+    max-width: 28mm;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+
+
 #nino{
-    min-width: 105mm;
-    max-width: 105mm;
+    min-width: 68mm;
+    max-width: 68mm;
     font-weight: bold;
     font-size: 80%;
 }
