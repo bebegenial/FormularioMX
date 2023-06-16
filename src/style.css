@@ -344,7 +344,7 @@ h1, #nitE{
 #edadNino1{
     min-width: 28mm;
     max-width: 28mm;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 80%;
 }
 
@@ -1274,7 +1274,7 @@ li{
     #edadNino1{
         min-width: 27mm;
         max-width: 27mm;
-        font-weight: bold;
+        /*font-weight: bold;*/
         font-size: 80%;
     }
     
@@ -1282,6 +1282,7 @@ li{
         min-width: 67mm;
         max-width: 67mm;
         font-weight: bold;
+        font-size: 80%;
     }
     
     .ciudad{
