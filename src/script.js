@@ -81,12 +81,13 @@ var $imgpago = document.querySelector("#pagofile");
 function ejecFunc(){
     if(validarCampos()===true){
         filtrarTexto();
+        alert("Puede que algunas palabras hayan sido borradas del campo Coleccion, por favor, revisar antes de enviar");
         resaltarCampos();
         guardarPdf();
         //enviarFormulario();
     }else{
         filtrarTexto();
-        alert("Debes llenar todos los campos requeridos");
+        alert("Debes llenar todos los campos requeridos");        
         resaltarCampos();
     }
 }
