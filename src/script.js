@@ -289,6 +289,13 @@ function filtrarTexto() {
     textarea.value = contenidoFiltrado;
 }
 
+//ctrP
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'p') {
+      event.preventDefault();
+    }
+  });
+
 $imgcedula1.addEventListener('change', ()=>{
     let imgfile1 = $imgcedula1.files[0];
     let imgfileURL1 = URL.createObjectURL(imgfile1);
