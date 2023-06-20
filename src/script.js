@@ -80,11 +80,13 @@ var $imgpago = document.querySelector("#pagofile");
 
 function ejecFunc(){
     if(validarCampos()===true){
+        filtrarTexto();
         resaltarCampos();
         guardarPdf();
         //enviarFormulario();
     }else{
-        alert("Debes llenar todos los campos requeridos")
+        filtrarTexto();
+        alert("Debes llenar todos los campos requeridos");
         resaltarCampos();
     }
 }
@@ -253,6 +255,37 @@ function resaltarCampos(){
     }else{
         $colaborador.style.background = "transparent";
     }
+}
+
+function filtrarTexto() {
+    var textarea = document.getElementById("detColec");
+    var contenido = textarea.value;
+    
+    // Palabras permitidas
+    var palabrasPermitidas = ["Metodo", "Bebe", "Poliglota", "Leo", "Con", "Expreso", "de", "metodo", "bebe", "poliglota", "leo", "con", "expreso", "De", "METODO", "BEBE", "POLIGLOTA", "LEO", "CON", "EXPRESO", "DE", "\\+"];
+
+    // Expresión regular para buscar palabras no permitidas
+    var regex = new RegExp("\\b(?!" + palabrasPermitidas.join("|") + ")\\w+\\b", "g");
+    /*
+    // Dividir el contenido en palabras
+    var palabras = contenido.split(" ");
+    
+    // Filtrar las palabras no permitidas
+    var palabrasFiltradas = palabras.filter(function(palabra) {
+      return palabrasPermitidas.includes(palabra);
+    });
+    
+    // Construir el nuevo contenido filtrado
+    var contenidoFiltrado = palabrasFiltradas.join(" ");
+    
+    // Asignar el contenido filtrado al textarea
+    textarea.value = contenidoFiltrado;*/
+
+    // Reemplazar las palabras no permitidas por una cadena vacía
+    var contenidoFiltrado = contenido.replace(regex, "");
+
+    // Asignar el contenido filtrado al textarea
+    textarea.value = contenidoFiltrado;
 }
 
 $imgcedula1.addEventListener('change', ()=>{
