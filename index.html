@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="src/reset.css">
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" type="text/css" href="src/style.css" media="screen" />
+    <script src="https://apis.google.com/js/api.js" id="gapi" defer></script>
+    <script src="https://accounts.google.com/gsi/client" id="gis"></script>
     <title>Formulario</title>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F4JB326PH6"></script>
+<!-- Google tag (gtag.js) 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F4JB326PH6"></script>-->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -20,7 +22,7 @@
 </script>
 <body>
 
-    <form action="" autocomplete="off">
+    <form action="" autocomplete="off" class="formulario">
 
         <div class="cabecera">
 
@@ -151,10 +153,6 @@
                 <div class="nomNino1">
                     <label for="nino">Nombre del niñ@:</label>
                     <input type="text" id="nino">
-                </div>
-                <div class="edadNino">
-                    <label for="edadNino1">Edad:</label>
-                    <input type="text" id="edadNino1">
                 </div>
             </div>
             <div class="ciudad">
@@ -350,7 +348,9 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
                 <div class="legal">
                     <p id="tituloL">DATOS IMPORTANTES PARA EL CLIENTE</p>
                     <br>
-                    <p id="textoL">Cláusula que sujetan a ambas partes que intervienen en el presente contrato. PRIMERA: EDITORIAL BEBE GENIAL SA DE CV RFC :
+                    <ol type="1">
+                        <li>
+                        Cláusula que sujetan a ambas partes que intervienen en el presente contrato. PRIMERA: EDITORIAL BEBE GENIAL SA DE CV RFC :
                         EBG 170126263 y/ o La SANTEL PROGRAMAS EDUCATIVOS SA DE CV Se obliga por el presente contrato a realizar la entrega del
                         material solicitado en la fecha de la firma de este contrato, mismo que reconoce, no será válido sin la firma de recepción de material del
                         comprador o la persona previamente designada para ello. SEGUNDA: Causales para el vencimiento de este contrato. Según el código
@@ -396,7 +396,9 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
                         penalización por cancelación) y devolver el material en perfecto estado. Esto en un plazo no mayor a cinco (05) días después de
                         entregada la mercancía, después de este plazo no se aceptará dicha cancelación. Queda enterado, que mientras este dentro del plazo
                         estipulado. DECIMA: Después de firmar este pedido la empresa bajo ninguna situación devolverá el valor recibido como cuota inicial, ya
-                        que la empresa presta asesoría personalizada e incurre en gastos de estudio de pedido y entrega.</p>
+                        que la empresa presta asesoría personalizada e incurre en gastos de estudio de pedido y entrega.
+                        </li>
+                    </ol>
                 </div>
 
                 <div class="celHuella">
@@ -446,6 +448,15 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
                         <p id="indiceD">Indice Derecho</p>
                     </div>
                     <input type="button" id="guardar" value="Guardar">
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <h2>Elige una opción</h2>
+                            <button id="opcion1">Registrarse</button>
+                            <button id="opcion2">Nuevo Pedido</button>
+                            <button id="opcion3">Buscar Pedido</button>
+                            <button id="opcion4">Actualizar Pedido</button>
+                        </div>
+                    </div>
                     <!--<button id="guardar">Guardar</button>-->
                     <label for="cedula4">IFE</label>
                     <input type="text" id="cedula4">
@@ -497,6 +508,9 @@ Cuenta Bebe Genial SA de CV Banbajio Clabe Interbancaria #030320900011592218
     </div>
 
 
-    <script src="src/script.js"></script>
+    <script src="src/script.js"></script>    
+    <script async defer src="src/auth.js"></script>
+    <script async defer src="src/sheets.js"></script>
+    <script async defer src="src/validacion.js"></script>
 </body>
 </html><!--Hector Rosas-->

@@ -1,4 +1,10 @@
 var $botonGuardar = document.querySelector("#guardar");
+var modal = document.getElementById('myModal');
+var opcion1Button = document.getElementById('opcion1');
+var opcion2Button = document.getElementById('opcion2');
+var opcion3Button = document.getElementById('opcion3');
+var opcion4Button = document.getElementById('opcion4');
+
 var $pedido = document.querySelector("#pedido");
 var $fecha = document.querySelector("#fecha");
 var $cuenta = document.querySelector("#cuenta");
@@ -38,7 +44,7 @@ var $rp1 = document.querySelector("#ptco1");
 var $rTele1 = document.querySelector("#telOR1");
 var $rTeleres1 = document.querySelector("#telRR1");
 
-var $rNomb2 = document.querySelector("#nombR3");
+var $rNomb2 = document.querySelector("#nombR2");
 var $rp2 = document.querySelector("#ptco2");
 var $rTele2 = document.querySelector("#telOR2");
 var $rTeleres2 = document.querySelector("#telRR2");
@@ -63,6 +69,7 @@ var $ce1 = document.querySelector("#ce1");
 var $relacionista = document.querySelector("#tomaCont");
 var $colaborador = document.querySelector("#especialista");
 var $director = document.querySelector("#director");
+$director.value = "Angelo Rodriguez";
 var $organizador = document.querySelector("#telCliente");
 
 var $cedula2 = document.querySelector("#cedula2");
@@ -73,30 +80,28 @@ var $cedula3 = document.querySelector("#cedula3");
 var $cedula4 = document.querySelector("#cedula4");
 let $inputs = document.querySelector(".inputs");
 const formulario = document.getElementById(".formulario");
+$cedula1.addEventListener('input', (event) => {
+    $cedula3.value = event.target.value;
+});
+$cedula2.addEventListener('input', (event) => {
+    $cedula4.value = event.target.value;
+});
+
+var $detColec = document.getElementById('detColec');
+var $detValor = document.getElementById('detValor');
+var $totalVal = document.getElementById('totalVal');
+var $nCoutas = document.getElementById('nCoutas');
+var $vrCuota = document.getElementById('vrCuota');
+var $observ = document.getElementById('observ');
+
 
 var $imgcedula1 = document.querySelector("#imgfile");
 var $imgcedula2 = document.querySelector("#imgfile2");
 var $imgpago = document.querySelector("#pagofile");
 
-function ejecFunc(){
-    if(validarCampos()===true){
-        filtrarTexto();
-        alert("Puede que algunas palabras hayan sido borradas del campo Coleccion, por favor, revisar antes de enviar");
-        resaltarCampos();
-        guardarPdf();
-        //enviarFormulario();
-    }else{
-        filtrarTexto();
-        alert("Debes llenar todos los campos requeridos");        
-        resaltarCampos();
-    }
-}
-$botonGuardar.onclick = ejecFunc;
 
+async function guardarPdf() {
 
-
-function guardarPdf(){
-    
     $botonGuardar.style.background = "#CFE6F9";
     $botonGuardar.style.color = "#CFE6F9";
     $botonGuardar.style.visibility = "hidden";
@@ -105,7 +110,7 @@ function guardarPdf(){
     $imgpago.style.visibility = "hidden";
 
     window.print();
-    
+
     $botonGuardar.style.background = "gray";
     $botonGuardar.style.color = "white";
     $botonGuardar.style.visibility = "visible";
@@ -114,202 +119,205 @@ function guardarPdf(){
     $imgpago.style.visibility = "visible";
 }
 
-function enviarFormulario(){
-    /*$botonGuardar.addEventListener("click", () => {
-        alert("prueba");
-    })*/
-
-    fetch('https://sheet.best/api/sheets/2a78aa3b-bb70-4d14-bddc-0fed465394da',{
-        method: "POST",
-        mode: "cors",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            "pedido": $pedido.value,
-            "fecha": $fecha.value,
-            "cuenta": $cuenta.value,
-            "nombre1": $nombre1.value,
-            "apellido": $apellido.value,
-            "direccion": $direccion.value,
-            "telefono": $telefono.value,
-            "barrio": $barrio.value,
-            "empresa": $empresa.value,
-            "telefono2": $telefono2.value,
-            "direccion2": $direccion2.value,
-            "cargo": $cargo.value,
-            "antiguo": $antiguo.value,
-            "sueldo": $sueldo.value,
-            "email": $email.value,
-            "fCobro": $fCobro.value,
-            "nNino": $nNino.value,
-            "ciudad": $ciudad.value,
-            "cNomb": $cNomb.value,
-            "cApell": $cApell.value,
-            "cEmpresa": $cEmpresa.value,
-            "cTele": $ctele.value,
-            "cDir": $cDir.value,
-            "cCargo": $cCargo.value,
-            "cAntig": $cAntig.value,
-            "cSueldo": $cSueldo.value,
-            "rNomb1": $rNomb1.value,
-            "r-p-1": $rp1.value,
-            "rTele1": $rTele1.value,
-            "rTele-res1": $rTeleres1.value,
-            "rNomb2": $rNomb2.value,
-            "r-p-2": $rp2.value,
-            "rTele2": $rTele2.value,
-            "rTele-res2": $rTeleres2.value,
-            "rNomb3": $rNomb3.value,
-            "r-p-3": $rp3.value,
-            "rTele3": $rTele3.value,
-            "rTele-res3": $rTeleres3.value,
-            "rNomb4": $rNomb4.value,
-            "r-p-4": $rp4.value,
-            "rTele4": $rTele4.value,
-            "rTele-res4": $rTeleres4.value,
-            "oCuotas": $oCuotas.value,
-            "oValor": $oValor.value,
-            "cedula1": $cedula1.value,
-            "cc1": $cc1.value,
-            "ce1": $ce1.value,
-            "relacionista": $relacionista.value,
-            "colaborador": $colaborador.value,
-            "director": $director.value,
-            "organizador": $organizador.value,
-            "cedula2": $cedula2.value,
-            "cc2": $cc2.value,
-            "ce2": $ce2.value,
-            "cedula3": $cedula3.value,
-            "cedula4": $cedula4.value,
-                       
-        })
-    });
-}
-
-function validarCampos(){
-    if($pedido.value.length === 0 || $nombre1.value.length === 0 || $apellido.value.length === 0 || $direccion.value.length === 0 || $telefono.value.length === 0 || $email.value.length === 0 || $ciudad.value.length === 0 || $relacionista.value.length === 0 || $colaborador.value.length === 0){
+function validarCampos() {
+    if ($nombre1.value.length <= 2 || $apellido.value.length <= 2 || $direccion.value.length <= 4 || $telefono.value.length <= 5 
+        || $email.value.length <= 5 || $ciudad.value.length === 0 || $cedula1.value.length <= 5 || $relacionista.value.length <= 5 
+        || $colaborador.value.length <= 5 || $fecha.value.length <= 5 || $fCobro.value.length === 0) {
         return false;
-    }else{
+    } else {
+        //$pedido.value = (parseInt(pedidos[pedidos.length - 1].pedido) + 1);
         return true;
     }
 }
 
-function resaltarCampos(){
-    if($pedido.value.length === 0){
+async function resaltarCampos() {
+    /*if($pedido.value.length === 0){
         $pedido.style.background = "rgb(255, 209, 209)";
     }else{
         $pedido.style.background = "transparent";
+    }*/
+
+    if ($fecha.value.length === 0) {
+        $fecha.style.background = "rgb(255, 209, 209)";
+    } else {
+        $fecha.style.background = "transparent";
     }
 
-    if($nombre1.value.length === 0){
+    if ($fCobro.value.length === 0) {
+        $fCobro.style.background = "rgb(255, 209, 209)";
+    } else {
+        $fCobro.style.background = "transparent";
+    }
+
+    if ($nombre1.value.length === 0) {
         $nombre1.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $nombre1.style.background = "transparent";
     }
 
-    if($apellido.value.length === 0){
+    if ($apellido.value.length === 0) {
         $apellido.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $apellido.style.background = "transparent";
     }
 
-    if($direccion.value.length === 0){
+    if ($direccion.value.length === 0) {
         $direccion.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $direccion.style.background = "transparent";
     }
 
-    if($telefono.value.length === 0){
+    if ($telefono.value.length === 0) {
         $telefono.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $telefono.style.background = "transparent";
     }
 
-    if($email.value.length === 0){
+    if ($email.value.length === 0) {
         $email.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $email.style.background = "transparent";
     }
 
-    if($ciudad.value.length === 0){
+    if ($ciudad.value.length === 0) {
         $ciudad.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $ciudad.style.background = "transparent";
     }
 
-    /*
-    if($cedula1.value.length === 0){
+    if ($cedula1.value.length <= 5) {
         $cedula1.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $cedula1.style.background = "white";
-    }*/
+    }
 
-    if($relacionista.value.length === 0){
+    if ($relacionista.value.length === 0) {
         $relacionista.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $relacionista.style.background = "transparent";
     }
 
-    if($colaborador.value.length === 0){
+    if ($colaborador.value.length === 0) {
         $colaborador.style.background = "rgb(255, 209, 209)";
-    }else{
+    } else {
         $colaborador.style.background = "transparent";
     }
 }
 
-function filtrarTexto() {
-    var textarea = document.getElementById("detColec");
-    var contenido = textarea.value;
-    
-    // Palabras permitidas
-    var palabrasPermitidas = ["Metodo", "Bebe", "Poliglota", "Leo", "Con", "Expreso", "de", "metodo", "bebe", "poliglota", "leo", "con", "expreso", "De", "METODO", "BEBE", "POLIGLOTA", "LEO", "CON", "EXPRESO", "DE", "\\+"];
-
-    // Expresión regular para buscar palabras no permitidas
-    var regex = new RegExp("\\b(?!" + palabrasPermitidas.join("|") + ")\\w+\\b", "g");
-    /*
-    // Dividir el contenido en palabras
-    var palabras = contenido.split(" ");
-    
-    // Filtrar las palabras no permitidas
-    var palabrasFiltradas = palabras.filter(function(palabra) {
-      return palabrasPermitidas.includes(palabra);
-    });
-    
-    // Construir el nuevo contenido filtrado
-    var contenidoFiltrado = palabrasFiltradas.join(" ");
-    
-    // Asignar el contenido filtrado al textarea
-    textarea.value = contenidoFiltrado;*/
-
-    // Reemplazar las palabras no permitidas por una cadena vacía
-    var contenidoFiltrado = contenido.replace(regex, "");
-
-    // Asignar el contenido filtrado al textarea
-    textarea.value = contenidoFiltrado;
-}
-
-//ctrP
-document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.key === 'p') {
-      event.preventDefault();
-    }
-  });
-
-$imgcedula1.addEventListener('change', ()=>{
+$imgcedula1.addEventListener('change', () => {
     let imgfile1 = $imgcedula1.files[0];
     let imgfileURL1 = URL.createObjectURL(imgfile1);
-    document.querySelector("#visual1").setAttribute('src',imgfileURL1);
+    document.querySelector("#visual1").setAttribute('src', imgfileURL1);
 })
 
-$imgcedula2.addEventListener('change', ()=>{
+$imgcedula2.addEventListener('change', () => {
     let imgfile2 = $imgcedula2.files[0];
     let imgfileURL2 = URL.createObjectURL(imgfile2);
-    document.querySelector("#visual2").setAttribute('src',imgfileURL2);
+    document.querySelector("#visual2").setAttribute('src', imgfileURL2);
 })
 
-$imgpago.addEventListener('change', ()=>{
+$imgpago.addEventListener('change', () => {
     let pago = $imgpago.files[0];
     let pagoURL2 = URL.createObjectURL(pago);
-    document.querySelector("#pago1").setAttribute('src',pagoURL2);
+    document.querySelector("#pago1").setAttribute('src', pagoURL2);
 })
+
+
+// Mostrar el modal al hacer clic en el botón "Guardar"
+$botonGuardar.addEventListener('click', function () {
+    modal.style.display = 'block';
+});
+
+//Autenticacion
+opcion1Button.addEventListener('click', function () {
+    modal.style.display = 'none';
+    handleAuthClick();
+    if (pedidos !== undefined) {
+        opcion1Button.style.display = "none";
+    }
+});
+
+//Nuevo Pedido
+opcion2Button.addEventListener('click', async function (event) {
+    
+    if (!pedidos) {
+        event.preventDefault();
+        alert("¡Debes Registrarte!")
+        handleAuthClick();        
+    } else {
+        modal.style.display = 'none';
+        if (validarCampos() === true && validandocampos()) {
+            event.preventDefault();
+            await getPedidos();
+            resaltarCampos();
+            await validarDatosingresados();
+            await nuevoPedido();
+            guardarPdf();     
+        } else if(validarCampos()) {
+            event.preventDefault();
+            alert("Debes llenar todos los campos requeridos")
+            resaltarCampos();
+        }else {
+            event.preventDefault();
+            alert("Debes llenar todos los campos requeridos")
+            resaltarCampos();
+        }
+    }
+});
+
+//Buscar Pedido
+opcion3Button.addEventListener('click', function (event) {
+    if (!pedidos) {
+        event.preventDefault();
+        alert("¡Debes Registrarte!")
+        handleAuthClick();
+    } else {
+        event.preventDefault();
+        buscarPedido();
+        modal.style.display = 'none';
+    }
+});
+
+//Actualizar Pedido
+opcion4Button.addEventListener('click', function (event) {
+    if (!pedidos) {
+        event.preventDefault();
+        //validar si inicio sesion
+        alert("¡Debes Registrarte!")
+        handleAuthClick();
+    } else if(validarCampos() === true) {
+        event.preventDefault();
+        modal.style.display = 'none';
+        editPedidos();        
+    } else {
+        event.preventDefault();
+        alert("Debes llenar todos los campos requeridos")
+        resaltarCampos();
+    }
+});
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+//Carga de Opciones al momento de ingresar a la pagina
+window.onload = function () {
+    modal.style.display = 'block'
+};
+
+
+document.addEventListener('keydown', function (event) {
+    if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
+        event.preventDefault();
+        console.log('La combinación de teclas Control + P está deshabilitada.');
+    }
+});
+
+
+window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    modal.style.display = 'block';
+});
