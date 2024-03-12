@@ -22,7 +22,14 @@ function validardireccion(inputElement) {
 /*para validar el email*/
 function validaremail(inputElement) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del correo electrónico
-    return emailPattern.test(inputElement.value);
+    
+    if(emailPattern.test(inputElement.value)){
+        return true;
+    }else{
+        $email.style.background = "rgb(255, 209, 209)";
+        alert("El Email tiene errores");
+        return false;
+    }
 }
 
 
