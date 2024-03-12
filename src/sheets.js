@@ -180,14 +180,14 @@ async function editPedidos() {
         ];
 
         response = await gapi.client.sheets.spreadsheets.values.update({
-            spreadsheetId: '1zjjoOVeIl11Ytg5grWpP_Z4BxlEbjMJYwjNpLebGbSg',
+            spreadsheetId: '1Hm6BrX0CTLTF7w5CDkumy2HZNXNuh-qHuAC38aLm2_U',
             range: `pedidos!A${filaEditar}:BJ${filaEditar}`,
             values: [update],
             valueInputOption: "USER_ENTERED"
         });
 
         response = await gapi.client.sheets.spreadsheets.values.update({
-            spreadsheetId: '1zjjoOVeIl11Ytg5grWpP_Z4BxlEbjMJYwjNpLebGbSg',
+            spreadsheetId: '1Hm6BrX0CTLTF7w5CDkumy2HZNXNuh-qHuAC38aLm2_U',
             range: `copia!A${filaPedido}:BJ${filaPedido}`,
             values: [copiaAnterior],
             valueInputOption: "USER_ENTERED"
@@ -432,7 +432,7 @@ async function nuevoPedido() {
             ];
 
             response = await gapi.client.sheets.spreadsheets.values.update({
-                spreadsheetId: '1zjjoOVeIl11Ytg5grWpP_Z4BxlEbjMJYwjNpLebGbSg',
+                spreadsheetId: '1Hm6BrX0CTLTF7w5CDkumy2HZNXNuh-qHuAC38aLm2_U',
                 range: `pedidos!A${filaNueva}:BJ${filaNueva}`,
                 values: [update],
                 valueInputOption: "USER_ENTERED"
